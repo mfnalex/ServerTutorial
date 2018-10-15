@@ -5,7 +5,7 @@ Have you ever wanted to make a cool tutorial for players that doesn't use boring
 
 ### Description
 
-**NOW 1.11 COMPATIBLE**
+**NOW 1.13 COMPATIBLE**
 
 This is the ultimate tutorial plugin for Bukkit. It allows easy creation of 'views' which the player sees after typing /tutorial. 
 
@@ -73,3 +73,5 @@ Make a new issue
             <artifactId>ServerTutorial</artifactId>
             <version>{version or LATEST}</version>
         </dependency>
+        
+### In process of adding language files

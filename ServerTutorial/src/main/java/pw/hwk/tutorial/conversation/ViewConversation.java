@@ -4,7 +4,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.conversations.*;
 import org.bukkit.entity.Player;
 import pw.hwk.tutorial.ServerTutorial;
-import pw.hwk.tutorial.api.AddViewEvent;
+import pw.hwk.tutorial.api.events.AddViewEvent;
 import pw.hwk.tutorial.data.Caching;
 import pw.hwk.tutorial.data.DataLoading;
 import pw.hwk.tutorial.data.TutorialManager;

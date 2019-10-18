@@ -33,3 +33,6 @@ per_tutorial_exp: "0"
 #per view eco settings
 per_view_money: "0.00"
 per_view_exp: "0"
+
+#language
+language: en

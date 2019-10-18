@@ -33,8 +33,7 @@ public class Caching {
         if (DataLoading.getDataLoading().getData().getString("tutorials") == null) {
             return;
         }
-        for (String tutorialName : DataLoading.getDataLoading().getData().getConfigurationSection("tutorials")
-                .getKeys(false)) {
+        for (String tutorialName : DataLoading.getDataLoading().getData().getConfigurationSection("tutorials").getKeys(false)) {
             this.tutorialNames.add(tutorialName.toLowerCase());
             Map<Integer, TutorialView> tutorialViews = new HashMap<>();
             if (DataLoading.getDataLoading().getData().getConfigurationSection("tutorials." + tutorialName +
@@ -168,7 +167,7 @@ public class Caching {
                 .getBoolean("view_exp"), plugin.getConfig().getBoolean("tutorial_money"), plugin.getConfig()
                 .getBoolean("tutorial_exp"), Double.valueOf(plugin.getConfig().getString("per_tutorial_money")),
                 Integer.valueOf(plugin.getConfig().getString("per_tutorial_exp")), Integer.valueOf(plugin.getConfig()
-                .getString("per_view_exp")), Double.valueOf(plugin.getConfig().getString("per_view_money")), plugin.getConfig().getBoolean("check_gamemode"));
+                .getString("per_view_exp")), Double.valueOf(plugin.getConfig().getString("per_view_money")), plugin.getConfig().getBoolean("check_gamemode"), plugin.getConfig().getString("language"));
         this.addConfig(configOptions);
     }
 

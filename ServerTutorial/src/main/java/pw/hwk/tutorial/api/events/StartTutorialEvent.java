@@ -1,17 +1,17 @@
-package pw.hwk.tutorial.api;
+package pw.hwk.tutorial.api.events;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import pw.hwk.tutorial.Tutorial;
 
-public class CreateTutorialEvent extends Event {
+public class StartTutorialEvent extends Event {
 
     private static final HandlerList handlers = new HandlerList();
     private Player player;
     private Tutorial tutorial;
 
-    public CreateTutorialEvent(Player player, Tutorial tutorial) {
+    public StartTutorialEvent(Player player, Tutorial tutorial) {
         this.player = player;
         this.tutorial = tutorial;
     }
@@ -26,7 +26,7 @@ public class CreateTutorialEvent extends Event {
     }
 
     /*
-     * Player who created a tutorial
+     * Player who started a tutorial
      * @return player
      */
     public Player getPlayer() {
@@ -34,7 +34,7 @@ public class CreateTutorialEvent extends Event {
     }
 
     /*
-     * Tutorial which was created
+     * Tutorial which was started
      * @return tutorial
      */
     public Tutorial getTutorial() {

@@ -2,7 +2,6 @@ package pw.hwk.tutorial;
 
 import net.milkbowl.vault.economy.EconomyResponse;
 import org.bukkit.ChatColor;
-import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.Sign;
 import org.bukkit.entity.Player;
@@ -14,8 +13,8 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.*;
-import pw.hwk.tutorial.api.EndTutorialEvent;
-import pw.hwk.tutorial.api.ViewSwitchEvent;
+import pw.hwk.tutorial.api.events.EndTutorialEvent;
+import pw.hwk.tutorial.api.events.ViewSwitchEvent;
 import pw.hwk.tutorial.data.Caching;
 import pw.hwk.tutorial.data.DataLoading;
 import pw.hwk.tutorial.data.TutorialManager;
@@ -30,6 +29,7 @@ import java.util.Set;
 import java.util.UUID;
 import java.util.logging.Level;
 import org.bukkit.GameMode;
+import org.bukkit.block.data.type.WallSign;
 
 public class TutorialListener implements Listener {
 
@@ -56,8 +56,8 @@ public class TutorialListener implements Listener {
         if ((event.getAction() == Action.RIGHT_CLICK_BLOCK || event.getAction() == Action.LEFT_CLICK_BLOCK) &&
                 !TutorialManager.getManager().isInTutorial(name)) {
             Block block = event.getClickedBlock();
-            if (block.getType() == Material.SIGN || block.getType() == Material.WALL_SIGN) {
-                Sign sign = (Sign) block.getState();
+            if (block.getBlockData() instanceof Sign || block.getBlockData() instanceof WallSign) {
+                Sign sign = (Sign) block.getBlockData();
                 String match = ChatColor.stripColor(TutorialUtils.color(TutorialManager.getManager().getConfigs()
                         .signSetting()));
                 if (sign.getLine(0).equalsIgnoreCase(match) && sign.getLine(1) != null) {
@@ -75,7 +75,7 @@ public class TutorialListener implements Listener {
             return;
         }
 
-        HashSet<Player> set = new HashSet<Player>(event.getRecipients());
+        HashSet<Player> set = new HashSet<>(event.getRecipients());
         for (Player setPlayer : set) {
             if (setPlayer == null) {
                 continue;

@@ -2,7 +2,7 @@ package pw.hwk.tutorial;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
-import pw.hwk.tutorial.api.EndTutorialEvent;
+import pw.hwk.tutorial.api.events.EndTutorialEvent;
 import pw.hwk.tutorial.data.Caching;
 import pw.hwk.tutorial.data.DataLoading;
 import pw.hwk.tutorial.data.TutorialManager;

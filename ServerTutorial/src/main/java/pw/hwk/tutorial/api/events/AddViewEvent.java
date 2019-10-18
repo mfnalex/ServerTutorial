@@ -1,4 +1,4 @@
-package pw.hwk.tutorial.api;
+package pw.hwk.tutorial.api.events;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;

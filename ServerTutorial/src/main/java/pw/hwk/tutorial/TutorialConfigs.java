@@ -17,12 +17,13 @@ public class TutorialConfigs {
     private int perViewExp;
     private double perViewMoney;
     private boolean checkGameMode;
+    private String language;
 
 
     public TutorialConfigs(boolean autoUpdate, String signSetting, boolean firstJoin, String firstJoinTutorial,
                            boolean rewards, boolean expCountdown, boolean viewMoney, boolean viewExp, boolean
                                    tutorialMoney, boolean tutorialExp, double perTutorialMoney, int perTutorialExp,
-                           int perViewExp, double perViewMoney, boolean checkGameMode) {
+                           int perViewExp, double perViewMoney, boolean checkGameMode, String language) {
 
         this.autoUpdate = autoUpdate;
         this.signSetting = signSetting;
@@ -39,6 +40,7 @@ public class TutorialConfigs {
         this.perViewExp = perViewExp;
         this.perViewMoney = perViewMoney;
         this.checkGameMode = checkGameMode;
+        this.language = language;
     }
 
     public boolean getUpdate() {
@@ -99,5 +101,9 @@ public class TutorialConfigs {
 
     public boolean getCheckGameMode() {
         return this.checkGameMode;
+    }
+
+    public String getLanguage() {
+        return this.language;
     }
 }

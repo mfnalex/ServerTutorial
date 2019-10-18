@@ -5,7 +5,7 @@ import org.bukkit.GameMode;
 import org.bukkit.conversations.*;
 import org.bukkit.entity.Player;
 import pw.hwk.tutorial.ServerTutorial;
-import pw.hwk.tutorial.api.CreateTutorialEvent;
+import pw.hwk.tutorial.api.events.CreateTutorialEvent;
 import pw.hwk.tutorial.data.Caching;
 import pw.hwk.tutorial.data.DataLoading;
 import pw.hwk.tutorial.data.TutorialManager;

@@ -64,14 +64,15 @@ We also include an update checker. It will download the latest updates for you. 
 Make a new issue
 
 ### Maven Repo
-        &lt;repository&gt;
-            &lt;id&gt;ServerTutorial&lt;/id&gt;
-            &lt;url&gt;http://repo.frostalf.net&lt;/url&gt;
-        &lt;/repository&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;pw.hwk&lt;/groupId&gt;
-            &lt;artifactId&gt;ServerTutorial&lt;/artifactId&gt;
-            &lt;version&gt;{version or LATEST}&lt;/version&gt;
-        &lt;/dependency&gt;
-        
+```xml
+        <repository>
+            <id>ServerTutorial</id>
+            <url>http://repo.frostalf.net</url>
+        </repository>
+        <dependency>
+            <groupId>pw.hwk</groupId>
+            <artifactId>ServerTutorial</artifactId>
+            <version>{version or LATEST}</version>
+        </dependency>
+```  
 ### In process of adding language files

@@ -27,19 +27,19 @@ This is the ultimate tutorial plugin for Bukkit. It allows easy creation of 'vie
 |-------|-----------|
 |/tutorial|List tutorials|
 |/tutorial help|Help page|
-|/tutorial <name>|Puts you in the tutorial|
-|/tutorial create <name>|Create a new tutorial|
-|/tutorial addview <name>|Add a view to a tutorial|
-|/tutorial remove <name>|Removes a tutorial|
-|/tutorial remove <name> <view number>|Removes a tutorial view|
+|/tutorial &lt;name&gt;|Puts you in the tutorial|
+|/tutorial create &lt;name&gt;|Create a new tutorial|
+|/tutorial addview &lt;name&gt;|Add a view to a tutorial|
+|/tutorial remove &lt;name&gt;|Removes a tutorial|
+|/tutorial remove &lt;name&gt; &lt;view number&gt;|Removes a tutorial view|
 
 ### Permissions
 |Permission|Command|Description|
 |----------|-------|-----------|
-|tutorial.create|Use /tutorial create <name>| Creating a tutorial|
-|tutorial.use|Use /tutorial <name>|Allows a player to use any tutorial|
-|tutorial.tutorial.<name>|Use /tutorial <name>|Allows a player to use a specific tutorial| 
-|tutorial.remove|Use /tutorial remove <name>|Remove a tutorial|
+|tutorial.create|Use /tutorial create &lt;name&gt;| Creating a tutorial|
+|tutorial.use|Use /tutorial &lt;name&gt;|Allows a player to use any tutorial|
+|tutorial.tutorial.&lt;name&gt;|Use /tutorial &lt;name&gt;|Allows a player to use a specific tutorial| 
+|tutorial.remove|Use /tutorial remove &lt;name&gt;|Remove a tutorial|
 
 ### Tutorial type
 |Tutorial Type|Description|
@@ -64,14 +64,14 @@ We also include an update checker. It will download the latest updates for you. 
 Make a new issue
 
 ### Maven Repo
-        <repository>
-            <id>ServerTutorial</id>
-            <url>http://repo.frostalf.net</url>
-        </repository>
-        <dependency>
-            <groupId>pw.hwk</groupId>
-            <artifactId>ServerTutorial</artifactId>
-            <version>{version or LATEST}</version>
-        </dependency>
+        &lt;repository&gt;
+            &lt;id&gt;ServerTutorial&lt;/id&gt;
+            &lt;url&gt;http://repo.frostalf.net&lt;/url&gt;
+        &lt;/repository&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;pw.hwk&lt;/groupId&gt;
+            &lt;artifactId&gt;ServerTutorial&lt;/artifactId&gt;
+            &lt;version&gt;{version or LATEST}&lt;/version&gt;
+        &lt;/dependency&gt;
         
 ### In process of adding language files
